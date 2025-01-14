@@ -1,6 +1,6 @@
 ---
 title: Armeria x Spring x Kotlin x gRPC
-posted_date: 2021-01-30
+date: 2021-01-30
 tags:
 - armeria
 - kotlin

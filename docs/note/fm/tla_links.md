@@ -1,6 +1,6 @@
 ---
 title: TLA+ 関連リンク集
-posted_date: 2020-07-28
+date: 2020-07-28
 tags:
 - verification
 ---

@@ -1,6 +1,6 @@
 ---
 title: Progress conditions
-posted_date: 2020-07-28
+date: 2020-07-28
 tags:
 - concurrent
 ---

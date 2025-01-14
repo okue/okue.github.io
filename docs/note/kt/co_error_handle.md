@@ -1,6 +1,6 @@
 ---
 title: 例外ハンドラと失敗の伝搬
-posted_date: 2020-07-27
+date: 2020-07-27
 tags:
 - kotlin
 - coroutine

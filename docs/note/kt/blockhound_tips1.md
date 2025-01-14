@@ -1,6 +1,6 @@
 ---
 title: BlockHound Tips
-posted_date: 2020-08-07
+date: 2020-08-07
 ---
 
 ## BlockHound が Mono#awaitFirst() を検知しないようにする

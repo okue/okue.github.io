@@ -46,6 +46,7 @@ plugins:
         - blog
       size: 20
       locale: ja_JP
+      time_format: '%Y-%m-%d'
       features:
         # NB: Built-in plugin ではなく, この tag 機能を利用中.
         tags:

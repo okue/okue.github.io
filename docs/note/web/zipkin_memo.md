@@ -1,6 +1,6 @@
 ---
 title: Zipkin 備忘録
-posted_date: 2020-07-30
+date: 2020-07-30
 tags:
 - web
 ---

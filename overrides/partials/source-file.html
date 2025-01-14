@@ -3,8 +3,9 @@
 <div class="md-source-file">
   <small>
 
-    {% if page.meta.posted_date %}
-    Posted: {{ page.meta.posted_date }}
+    <!-- Use `date` metadata to share with blogging plugin (https://github.com/liang2kl/mkdocs-blogging-plugin/blob/v2.2.11/mkdocs_blogging_plugin/plugin.py#L336-L341)-->
+    {% if page.meta.date %}
+    Posted: {{ page.meta.date }}
     {% endif %}
     <br />
     <!-- mkdocs-git-revision-date-localized-plugin -->
