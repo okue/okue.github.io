@@ -1,0 +1,111 @@
+# see:
+# https://squidfunk.github.io/mkdocs-material/getting-started/
+# https://www.mkdocs.org/user-guide/configuration/
+site_name: okue blog
+site_description: メモとかブログとか
+remote_branch: master
+site_url: https://okue.github.io
+
+theme:
+  name: material
+  custom_dir: overrides
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+  features:
+    - navigation.tabs
+    - navigation.expand
+  icon:
+    logo: fontawesome/solid/kiwi-bird
+  palette:
+    primary: teal
+    accent: green
+
+nav:
+  - Home: index.md
+  - Note:
+      - Kotlin:
+          - note/kt/co_error_handle.md
+          - note/kt/triple_loop.md
+          - note/kt/blockhound_tips1.md
+      - Web:
+          - note/web/grpc_links.md
+          - note/web/grpc_armeria_spring.md
+          - note/web/zipkin_memo.md
+      - FM:
+          - note/fm/links.md
+          - note/fm/tla_links.md
+      - note/progress_conditions.md
+      - note/protobuf.md
+      - note/latex_docker_cmd.md
+  - Blog: blog/index.md
+  - Tags: tags.md
+
+plugins:
+  # https://liang2kl.github.io/mkdocs-blogging-plugin/
+  - blogging:
+      dirs:
+        - blog
+      size: 20
+      locale: ja_JP
+      features:
+        # NB: Built-in plugin ではなく, この tag 機能を利用中.
+        tags:
+          insert: top
+          index_page: tags.md
+  - search
+  # https://github.com/chrieke/mkdocs-exclude-search
+  - exclude-search:
+      exclude:
+        - s/*.md
+  # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/
+  - git-revision-date-localized:
+      type: iso_date
+      timezone: Asia/Tokyo
+      exclude:
+        - index.md
+        - blog/index.md
+        - tags.md
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  # https://squidfunk.github.io/mkdocs-material/extensions/permalinks/#permalinks
+  - toc:
+      permalink: true
+  - codehilite
+  - admonition
+  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
+  - footnotes
+  # https://facelessuser.github.io/pymdown-extensions/
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      social_url_shorthand: true
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+# See https://fontawesome.com/
+extra_css:
+  - 'https://use.fontawesome.com/releases/v6.2.1/css/all.css'
+
+extra:
+  # Setting up the footer:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/okue/

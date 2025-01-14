@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "okue.github.io"
+version = "0.1.0"
+description = "Blog page built by mkdocs-materials"
+authors = ["okue"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs-material = "^8.5.11"
+mkdocs-git-revision-date-localized-plugin = "^1.1.0"
+mkdocs-exclude-search = "^0.6.4"
+mkdocs-blogging-plugin = "^2.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

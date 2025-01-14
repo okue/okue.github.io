@@ -1,0 +1,28 @@
+# https://squidfunk.github.io/mkdocs-material/publishing-your-site/
+name: publish
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: pip install poetry==1.8.2
+      - run: |
+          poetry --version
+          poetry install
+      - run: poetry run mkdocs gh-deploy --force --verbose
+        env:
+          TZ: 'Asia/Tokyo'

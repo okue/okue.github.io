@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+
+{% set description = config.site_description %}
+{% if page and page.meta.description %}
+{% set description = page.meta.description %}
+{% endif %}
+
+{% set image = config.site_url ~ 'img/site.jpeg' %}
+{% if page and page.meta.image %}
+{% set image = config.site_url ~ page.meta.image %}
+{% endif %}
+
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ image }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ok_eeeee">
+<meta name="twitter:creator" content="@ok_eeeee">
+
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ image }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.canonical_url }}">
+<meta property="og:locale" content="ja_JP">
+{% endblock %}
