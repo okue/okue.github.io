@@ -648,13 +648,17 @@
 
   <h1>三重ループをコルーチンで</h1>
 
-<div class="blogging-tags-grid">
+<div class="md-typeset">
+    <div class="blogging-tags-grid">
 
         <a href="https://okue.github.io/tags#kotlin" class="blogging-tag"><code>#kotlin</code></a>
 
         <a href="https://okue.github.io/tags#coroutine" class="blogging-tag"><code>#coroutine</code></a>
 
     </div>
+
+
+</div>
 
 <style>
     .md-typeset .blogging-tags-grid {
@@ -668,6 +672,8 @@
     .md-typeset .blogging-tag {
         color: var(--md-typeset-color);
         background-color: var(--md-typeset-code-color);
+        white-space: nowrap;
+        display: block;
     }
 
     .md-typeset .blogging-tag code {
@@ -694,8 +700,7 @@
 <div class="md-source-file">
   <small>
 
-    
-    Posted: 2020-07-28
+    <!-- Use `date` metadata to share with blogging plugin (https://github.com/liang2kl/mkdocs-blogging-plugin/blob/v2.2.11/mkdocs_blogging_plugin/plugin.py#L336-L341)-->
     
     <br />
     <!-- mkdocs-git-revision-date-localized-plugin -->

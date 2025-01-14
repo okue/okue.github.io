@@ -691,11 +691,15 @@
 
   <h1>2022年は副業を始めた年だった</h1>
 
-<div class="blogging-tags-grid">
+<div class="md-typeset">
+    <div class="blogging-tags-grid">
 
         <a href="https://okue.github.io/tags#work" class="blogging-tag"><code>#work</code></a>
 
     </div>
+
+
+</div>
 
 <style>
     .md-typeset .blogging-tags-grid {
@@ -709,6 +713,8 @@
     .md-typeset .blogging-tag {
         color: var(--md-typeset-color);
         background-color: var(--md-typeset-code-color);
+        white-space: nowrap;
+        display: block;
     }
 
     .md-typeset .blogging-tag code {
@@ -781,6 +787,7 @@
 <div class="md-source-file">
   <small>
 
+    <!-- Use `date` metadata to share with blogging plugin (https://github.com/liang2kl/mkdocs-blogging-plugin/blob/v2.2.11/mkdocs_blogging_plugin/plugin.py#L336-L341)-->
     
     Posted: 2022-12-27
     

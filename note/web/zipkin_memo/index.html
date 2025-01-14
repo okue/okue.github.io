@@ -697,11 +697,15 @@
 
   <h1>Zipkin 備忘録</h1>
 
-<div class="blogging-tags-grid">
+<div class="md-typeset">
+    <div class="blogging-tags-grid">
 
         <a href="https://okue.github.io/tags#web" class="blogging-tag"><code>#web</code></a>
 
     </div>
+
+
+</div>
 
 <style>
     .md-typeset .blogging-tags-grid {
@@ -715,6 +719,8 @@
     .md-typeset .blogging-tag {
         color: var(--md-typeset-color);
         background-color: var(--md-typeset-code-color);
+        white-space: nowrap;
+        display: block;
     }
 
     .md-typeset .blogging-tag code {
@@ -742,6 +748,7 @@
 <div class="md-source-file">
   <small>
 
+    <!-- Use `date` metadata to share with blogging plugin (https://github.com/liang2kl/mkdocs-blogging-plugin/blob/v2.2.11/mkdocs_blogging_plugin/plugin.py#L336-L341)-->
     
     Posted: 2020-07-30
     
